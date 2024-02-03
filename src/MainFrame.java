@@ -1,20 +1,30 @@
 import javax.swing.*;
 
 public class MainFrame extends JFrame {
-    private JPanel panel1;
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
     private JComboBox comboBox1;
-    private JButton продолжитьButton;
+    private JButton button1;
 
-    public MainFrame(){
-        setContentPane(panel1);
-        setBounds(100,100,500,400);
+    private JPanel panel;
+
+    public MainFrame() {
+        setTitle("First");
+        setContentPane(panel);
+        setBounds(100, 100, 200, 200);
+        setVisible(true);
+
+        button1.addActionListener((event) -> {
+            new SECLIST(getX(), getY(), getWidth(), getHeight());
+            dispose();
+        });
+
+        setBounds(100, 100, 500, 400);
         setVisible(true);
 
         comboBox1.addItem("Мужской");
         comboBox1.addItem("Женский");
 
+        }
     }
-}
